@@ -1,0 +1,62 @@
+/* Base styles */
+@layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  /* Mobile-first responsive styles */
+  @layer components {
+    /* Small devices (phones) */
+    @media (max-width: 640px) {
+      .hero-title {
+        @apply text-4xl;
+      }
+      .hero-subtitle {
+        @apply text-lg;
+      }
+      .property-grid {
+        @apply grid-cols-1 gap-6;
+      }
+      .nav-menu {
+        @apply hidden;
+      }
+    }
+  
+    /* Medium devices (tablets) */
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .hero-title {
+        @apply text-5xl;
+      }
+      .hero-subtitle {
+        @apply text-xl;
+      }
+      .property-grid {
+        @apply grid-cols-2 gap-6;
+      }
+    }
+  
+    /* Large devices (desktops) */
+    @media (min-width: 1025px) {
+      .hero-title {
+        @apply text-6xl;
+      }
+      .hero-subtitle {
+        @apply text-2xl;
+      }
+      .property-grid {
+        @apply grid-cols-3 gap-8;
+      }
+    }
+  }
+  
+  /* Custom utility classes for responsive design */
+  @layer utilities {
+    .responsive-padding {
+      @apply px-4 md:px-6 lg:px-8;
+    }
+    
+    .responsive-container {
+      @apply max-w-7xl mx-auto;
+    }
+  }
